@@ -1,0 +1,54 @@
+{
+  "name": "bcf",
+  "version": "1.0.0",
+  "title": "XX系统管理端",
+  "description": "基础访问客户端",
+  "main": "src/main.js",
+  "home": "http://www.baidu.com",
+  "icon": "src/icon.ico",
+  "scripts": {
+    "build": "electron-builder",
+    "dev": "electron src/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/choufeng/bcf.git"
+  },
+  "author": "Jon.Xia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/choufeng/bcf/issues"
+  },
+  "homepage": "https://github.com/choufeng/bcf#readme",
+  "build": {
+    "productName": "Basic System Client",
+    "appId": "com.yccim.bcf",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "icon": "icon.ico",
+      "target": "msi"
+    },
+    "msi": {
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "perMachine": true,
+      "shortcutName": "Basic System Client",
+      "oneClick": false
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": true,
+      "deleteAppDataOnUninstall": true
+    },
+    "linux": {
+      "icon": "icon.ico",
+      "target": "tar.gz"
+    }
+  },
+  "devDependencies": {
+    "electron-builder": "^20.28.4"
+  }
+}
